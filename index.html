@@ -633,7 +633,7 @@ html:not(.js) .sd-line,html:not(.js) .sd-cross{transform:none}
 #hero{align-items:flex-end}
 .hero-content{padding:0 22px 110px}
 .hero-bg{position:absolute;inset:-14% 0;overflow:visible;background:var(--dark)}
-.hero-drift{position:absolute;inset:0;display:block;background:url('bg/portada.webp') center 12%/cover no-repeat;
+.hero-drift{position:absolute;inset:0;display:block;background:url('bg/regalos.webp') center 46%/cover no-repeat;
   animation:heroDrift 20s ease-in-out infinite alternate;transform-origin:50% 55%}
 @keyframes heroDrift{0%{transform:translate3d(-2%,1.5%,0) scale(1.04)}100%{transform:translate3d(2%,-1.5%,0) scale(1.16)}}
 .hero-glow{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;overflow:hidden}
@@ -1245,13 +1245,15 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
           mask-image:linear-gradient(transparent 0,#000 120px,#000 calc(100% - 120px),transparent)}
 .secbg>i{position:-webkit-sticky;position:sticky;top:0;display:block;width:100%;height:100vh;height:100lvh;
   background-repeat:no-repeat;background-position:center;background-size:cover;
-  animation:secDrift 26s ease-in-out infinite alternate;transform-origin:50% 50%}
-.secbg.a2>i{animation-delay:-9s;animation-direction:alternate-reverse}
-.secbg.a3>i{animation-delay:-17s;animation-duration:30s}
+  animation:secDrift 18s ease-in-out infinite alternate;transform-origin:50% 50%;will-change:transform}
+.secbg.a2>i{animation-name:secDriftB;animation-delay:-7s;animation-duration:20s}
+.secbg.a3>i{animation-name:secDriftC;animation-delay:-13s;animation-duration:22s}
 .secbg.flipx{transform:scaleX(-1)}
 .secbg.soft{opacity:.7}
 .secbg.top>i{background-position:center top}
-@keyframes secDrift{0%{transform:translate3d(-1.5%,-1%,0) scale(1.02)}100%{transform:translate3d(1.5%,1%,0) scale(1.09)}}
+@keyframes secDrift{0%{transform:translate3d(-4%,-2.5%,0) scale(1.05) rotate(-1deg)}50%{transform:translate3d(1.5%,2%,0) scale(1.12) rotate(.4deg)}100%{transform:translate3d(4%,-1%,0) scale(1.17) rotate(1deg)}}
+@keyframes secDriftB{0%{transform:translate3d(3.5%,2.5%,0) scale(1.16) rotate(1deg)}50%{transform:translate3d(-1%,-2%,0) scale(1.08) rotate(-.5deg)}100%{transform:translate3d(-4%,1.5%,0) scale(1.04) rotate(-1deg)}}
+@keyframes secDriftC{0%{transform:translate3d(0,-3%,0) scale(1.06) rotate(.6deg)}33%{transform:translate3d(-3.5%,1%,0) scale(1.13) rotate(-.8deg)}66%{transform:translate3d(3%,3%,0) scale(1.1) rotate(.9deg)}100%{transform:translate3d(1%,-2%,0) scale(1.16) rotate(-.4deg)}}
 @media(prefers-reduced-motion:reduce){.secbg>i{animation:none}}
 #countdown,#footer{background:transparent}
 
@@ -1268,6 +1270,22 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
 .hero-bride.foil-text,.hero-groom.foil-text{filter:drop-shadow(0 0 22px rgba(247,231,206,.28)) drop-shadow(0 3px 14px rgba(5,12,35,.6))}
 .hero-amp .foil-text{font-size:36px}
 .hero-date{margin-top:22px;font-size:16px}
+
+/* Hero v4: óvalo de luz al centro que enmarca los nombres */
+#hero{align-items:center}
+.hero-content{padding:0 22px 4vh!important}
+.hero-drift{background:#FBFAF8 url('bg/regalos.webp') center 47%/118% auto no-repeat!important}
+.hero-bg{background:#FBFAF8!important}
+.hero-veil{background:radial-gradient(ellipse 70% 34% at 50% 47%,rgba(255,255,255,.62) 0%,rgba(255,255,255,.3) 55%,rgba(255,255,255,0) 80%)!important}
+.hero-vig{background:radial-gradient(ellipse 125% 95% at 50% 46%,rgba(30,58,138,0) 58%,rgba(30,58,138,.14) 100%)!important}
+.hero-pre{color:var(--accent2)!important;text-shadow:0 0 10px rgba(255,255,255,.95)!important}
+.hero-tag{color:var(--dark)!important;text-shadow:0 0 10px rgba(255,255,255,.95)!important}
+.hero-date{color:var(--dark)!important;text-shadow:0 0 12px rgba(255,255,255,.95)!important}
+.hero-date small{color:var(--accent2)!important}
+.hero-bride.foil-text,.hero-groom.foil-text{filter:drop-shadow(0 0 14px rgba(255,255,255,.95)) drop-shadow(0 2px 6px rgba(30,58,138,.18))!important}
+.hero-amp .foil-text{filter:drop-shadow(0 0 10px rgba(255,255,255,.95))!important}
+.hero-dust i{background:#4A7BB7!important;box-shadow:0 0 6px 1px rgba(74,123,183,.35)!important}
+.hero-deco-corner svg path,.hero-deco-corner svg circle{stroke:#7F8A9A}
 
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.25s!important}}
 </style>
@@ -1294,7 +1312,7 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
 <div class="wrap">
 
   <!-- HERO -->
-  <section id="hero" data-nav="Inicio" data-bot="#1C2A55">
+  <section id="hero" data-nav="Inicio" data-bot="#F4F6FA">
     <div class="hero-bg" id="heroBg"><i class="hero-drift"></i></div>
     <div class="hero-glow" aria-hidden="true"><span class="hg hg1"></span><span class="hg hg2"></span><span class="hg hg3"></span><span class="hg hg4"></span></div>
     <div class="hero-lens" aria-hidden="true"><span></span></div>
@@ -1311,9 +1329,9 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
       <span class="hero-pre">Nuestra</span>
       <span class="hero-tag">Primera Comunión</span>
       <span class="hero-names">
-        <span class="hero-bride foil-text foil-dark">Santiago</span>
-        <span class="hero-amp"><span class="foil-text foil-dark">&amp;</span></span>
-        <span class="hero-groom foil-text foil-dark" style="animation-delay:-2.5s">Luis</span>
+        <span class="hero-bride foil-text">Santiago</span>
+        <span class="hero-amp"><span class="foil-text">&amp;</span></span>
+        <span class="hero-groom foil-text" style="animation-delay:-2.5s">Luis</span>
       </span>
       <span class="hero-date">6 · Febrero · 2027<small>Ciudad de México</small></span>
     </div>
@@ -1616,7 +1634,7 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
 
   <!-- REGALOS -->
   <section data-ink="1" id="regalos" data-nav="Regalos" class="lsx-sec" data-top="#EEF4FB" data-bot="#EEF4FB">
-    <div class="secbg" aria-hidden="true"><i style="background-image:url('bg/regalos.webp')"></i></div>
+    <div class="secbg flipx a3" aria-hidden="true"><i style="background-image:url('bg/padres.webp')"></i></div>
     <div class="lsx-rain" id="lsxRain" aria-hidden="true"></div>
     <div class="lsx-stage">
       <p class="eyebrow rv">Mesa de Regalos</p>
