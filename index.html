@@ -633,7 +633,7 @@ html:not(.js) .sd-line,html:not(.js) .sd-cross{transform:none}
 #hero{align-items:flex-end}
 .hero-content{padding:0 22px 110px}
 .hero-bg{position:absolute;inset:-14% 0;overflow:visible;background:var(--dark)}
-.hero-drift{position:absolute;inset:0;display:block;background:url('portada.jpg?v=1') center 72%/cover no-repeat;
+.hero-drift{position:absolute;inset:0;display:block;background:url('bg/portada.webp') center 12%/cover no-repeat;
   animation:heroDrift 20s ease-in-out infinite alternate;transform-origin:50% 55%}
 @keyframes heroDrift{0%{transform:translate3d(-2%,1.5%,0) scale(1.04)}100%{transform:translate3d(2%,-1.5%,0) scale(1.16)}}
 .hero-glow{position:absolute;inset:0;mix-blend-mode:screen;pointer-events:none;overflow:hidden}
@@ -1237,6 +1237,24 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
   #musicFab .vinyl-tonearm{transition:none}
   #musicFab.vinyl-fab{transition:opacity .3s ease}
 }
+/* ═════════ FONDOS POR SECCIÓN (acuarelas generadas) ═════════ */
+.wrap{overflow:hidden;overflow:clip}
+section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:hidden;overflow:clip}
+.secbg{position:absolute;inset:0;z-index:-2;pointer-events:none;overflow:hidden;overflow:clip;
+  -webkit-mask-image:linear-gradient(transparent 0,#000 120px,#000 calc(100% - 120px),transparent);
+          mask-image:linear-gradient(transparent 0,#000 120px,#000 calc(100% - 120px),transparent)}
+.secbg>i{position:-webkit-sticky;position:sticky;top:0;display:block;width:100%;height:100vh;height:100lvh;
+  background-repeat:no-repeat;background-position:center;background-size:cover;
+  animation:secDrift 26s ease-in-out infinite alternate;transform-origin:50% 50%}
+.secbg.a2>i{animation-delay:-9s;animation-direction:alternate-reverse}
+.secbg.a3>i{animation-delay:-17s;animation-duration:30s}
+.secbg.flipx{transform:scaleX(-1)}
+.secbg.soft{opacity:.7}
+.secbg.top>i{background-position:center top}
+@keyframes secDrift{0%{transform:translate3d(-1.5%,-1%,0) scale(1.02)}100%{transform:translate3d(1.5%,1%,0) scale(1.09)}}
+@media(prefers-reduced-motion:reduce){.secbg>i{animation:none}}
+#countdown,#footer{background:transparent}
+
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.25s!important}}
 </style>
 </head>
@@ -1303,7 +1321,8 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
   </div>
 
   <!-- COUNTDOWN -->
-  <section id="countdown" class="sec rv">
+  <section data-ink="1" id="countdown" class="sec rv">
+    <div class="secbg a2" aria-hidden="true"><i style="background-image:url('bg/cuenta.webp')"></i></div>
     <p class="eyebrow">Faltan</p>
     <h2 class="script-title">Cuenta Regresiva</h2>
     <p class="section-sub">Para recibir a Jesús por primera vez</p>
@@ -1326,7 +1345,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- QUOTE -->
   <section data-ink="1" id="quote" data-top="#E4F5FD" data-bot="#E4F5FD">
-    <div class="ink-bg ink-c" aria-hidden="true" style="opacity:.42"><i style="background-image:url('ink/ink-footer.webp')"></i></div>
+    <div class="secbg" aria-hidden="true"><i style="background-image:url('bg/frase.webp')"></i></div>
     <div class="sec-div rv" aria-hidden="true"><span class="sd-line"></span><svg class="sd-cross" viewBox="0 0 20 28"><path d="M10 1v26M3 9h14" stroke="#8F99A8" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg><span class="sd-line"></span></div>
     <span class="quote-mark rv">"</span>
     <p class="quote-txt rv">
@@ -1348,7 +1367,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- FAMILIARES -->
   <section data-ink="1" id="familiares" data-nav="Familia">
-    <div class="ink-bg ink-a" aria-hidden="true"><i style="background-image:url('ink/ink-top.webp')"></i></div>
+    <div class="secbg a3" aria-hidden="true"><i style="background-image:url('bg/padres.webp')"></i></div>
     <p class="eyebrow rv">Con la bendición de</p>
     <h2 class="script-title">Nuestros Padres</h2>
     <p class="section-sub rv">Quienes nos han guiado en la fe</p>
@@ -1368,7 +1387,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- UBICACION -->
   <section data-ink="1" id="ubicacion" data-nav="Ubicación">
-    <div class="ink-bg ink-c flip" aria-hidden="true"><i style="background-image:url('ink/ink-hero.webp')"></i></div>
+    <div class="secbg a2" aria-hidden="true"><i style="background-image:url('bg/ubicacion.webp')"></i></div>
     <div class="sec-div rv" aria-hidden="true"><span class="sd-line"></span><svg class="sd-cross" viewBox="0 0 20 28"><path d="M10 1v26M3 9h14" stroke="#8F99A8" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg><span class="sd-line"></span></div>
     <p class="eyebrow rv">Dónde Celebramos</p>
     <h2 class="script-title">Ubicación</h2>
@@ -1461,7 +1480,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- DRESS CODE -->
   <section data-ink="1" id="dresscode" class="sec dcx-sec" data-nav="Vestimenta" aria-label="Código de vestimenta">
-    <div class="ink-bg ink-d flip" aria-hidden="true"><i style="background-image:url('ink/ink-corner.webp')"></i></div>
+    <div class="secbg" aria-hidden="true"><i style="background-image:url('bg/vestimenta.webp')"></i></div>
 
     <p class="dcx-label rv">Código de vestimenta</p>
     <h2 class="dcx-title rv">Formal</h2>
@@ -1532,7 +1551,8 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
   </section>
 
   <!-- GALERÍA -->
-  <section id="galeria" data-nav="Galería" class="c3-sec">
+  <section data-ink="1" id="galeria" data-nav="Galería" class="c3-sec">
+    <div class="secbg soft" aria-hidden="true"><i style="background-image:url('bg/galeria.webp')"></i></div>
     <div class="sec-div rv" aria-hidden="true"><span class="sd-line"></span><svg class="sd-cross" viewBox="0 0 20 28"><path d="M10 1v26M3 9h14" stroke="#8F99A8" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg><span class="sd-line"></span></div>
     <p class="eyebrow rv">Nosotros</p>
     <h2 class="script-title">Nuestra Historia</h2>
@@ -1588,7 +1608,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- REGALOS -->
   <section data-ink="1" id="regalos" data-nav="Regalos" class="lsx-sec" data-top="#EEF4FB" data-bot="#EEF4FB">
-    <div class="ink-bg ink-a ink-fit" aria-hidden="true" style="opacity:.6"><i style="background-image:url('ink/ink-oval.webp')"></i></div>
+    <div class="secbg" aria-hidden="true"><i style="background-image:url('bg/regalos.webp')"></i></div>
     <div class="lsx-rain" id="lsxRain" aria-hidden="true"></div>
     <div class="lsx-stage">
       <p class="eyebrow rv">Mesa de Regalos</p>
@@ -1650,7 +1670,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- ALBUM -->
   <section data-ink="1" id="album" data-nav="Álbum">
-    <div class="ink-bg ink-b" aria-hidden="true"><i style="background-image:url('ink/ink-hero.webp')"></i></div>
+    <div class="secbg a3" aria-hidden="true"><i style="background-image:url('bg/album.webp')"></i></div>
     <p class="eyebrow rv">Recuerdos Compartidos</p>
     <h2 class="script-title">Álbum de Fotos</h2>
     <p class="album-note rv">Sé parte de nuestra historia. Comparte tus fotos y videos de este día tan especial; queremos verlo a través de tus ojos.</p>
@@ -1669,7 +1689,7 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
 
   <!-- RSVP -->
   <section data-ink="1" id="rsvp" data-nav="Confirmar" class="rsvp-v2">
-    <div class="ink-bg ink-d ink-fit flip" aria-hidden="true" style="opacity:.55"><i style="background-image:url('ink/ink-oval.webp')"></i></div>
+    <div class="secbg flipx" aria-hidden="true"><i style="background-image:url('bg/regalos.webp')"></i></div>
     <p class="eyebrow rv">Confirma tu asistencia</p>
     <h2 class="script-title">Te Esperamos</h2>
     <p class="rsvp-text rv">Por favor confírmanos antes del<br><strong>domingo 10 de enero de 2027</strong>.</p>
@@ -1729,7 +1749,8 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
   </section>
 
   <!-- FOOTER -->
-  <footer id="footer" data-top="#D9F0FC" data-bot="#D9F0FC">
+  <footer data-ink="1" id="footer" data-top="#D9F0FC" data-bot="#D9F0FC">
+    <div class="secbg top" aria-hidden="true"><i style="background-image:url('bg/cierre.webp')"></i></div>
     <div class="footer-deco rv">
       <svg viewBox="0 0 40 56" width="40" height="56" fill="none"><path d="M20 2v52M8 16h24" stroke="#8F99A8" stroke-width="1.4" stroke-linecap="round"/><circle cx="20" cy="16" r="3" fill="#C0C0C0"/></svg>
     </div>
