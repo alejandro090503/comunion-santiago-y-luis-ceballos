@@ -9,8 +9,8 @@
 <meta property="og:url" content="https://comunion-santiago-y-luis-ceballos.vercel.app/">
 <meta property="og:title" content="Santiago &amp; Luis · Primera Comunión">
 <meta property="og:description" content="Sábado 6 de febrero de 2027 · Ciudad de México">
-<meta property="og:image" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg">
-<meta property="og:image:secure_url" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg">
+<meta property="og:image" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg?v=2">
+<meta property="og:image:secure_url" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg?v=2">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <meta name="twitter:url" content="https://comunion-santiago-y-luis-ceballos.vercel.app/">
 <meta name="twitter:title" content="Santiago &amp; Luis · Primera Comunión">
 <meta name="twitter:description" content="Sábado 6 de febrero de 2027 · Ciudad de México">
-<meta name="twitter:image" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://comunion-santiago-y-luis-ceballos.vercel.app/og-image.jpg?v=2">
 <meta name="theme-color" content="#F7FAFE">
 <script>document.documentElement.classList.add('js');if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1255,6 +1255,20 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
 @media(prefers-reduced-motion:reduce){.secbg>i{animation:none}}
 #countdown,#footer{background:transparent}
 
+/* Hero v3: nombres al centro y más lucidos */
+#hero{align-items:center}
+.hero-content{padding:30vh 22px 0}
+.hero-drift{background-position:center 2%!important}
+#scrollHint{display:none}
+.hero-pre,.hero-tag{text-shadow:0 1px 3px rgba(5,12,35,.9),0 0 14px rgba(5,12,35,.75)}
+.hero-veil{background:
+  radial-gradient(ellipse 90% 40% at 50% 63%,rgba(10,22,58,.5) 0%,rgba(10,22,58,.22) 50%,rgba(10,22,58,0) 75%),
+  linear-gradient(to bottom,rgba(10,22,58,0) 0%,rgba(10,22,58,0) 34%,rgba(10,22,58,.38) 52%,rgba(10,22,58,.66) 72%,rgba(10,22,58,.82) 100%)!important}
+.hero-bride,.hero-groom{font-size:clamp(80px,25vw,112px)}
+.hero-bride.foil-text,.hero-groom.foil-text{filter:drop-shadow(0 0 22px rgba(247,231,206,.28)) drop-shadow(0 3px 14px rgba(5,12,35,.6))}
+.hero-amp .foil-text{font-size:36px}
+.hero-date{margin-top:22px;font-size:16px}
+
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.25s!important}}
 </style>
 </head>
@@ -1270,8 +1284,8 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
 <div id="petals"></div>
 
 <div id="envelope-screen">
-  <img id="envImage" src="sobre.jpg" alt="Invitación de Primera Comunión de Santiago y Luis">
-  <video id="envVideo" src="apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg"></video>
+  <img id="envImage" src="sobre-sl.jpg" alt="Invitación de Primera Comunión de Santiago y Luis">
+  <video id="envVideo" src="apertura-sl.mp4" muted playsinline preload="auto" poster="sobre-sl.jpg"></video>
   <div class="env-tap" id="envTap">Toca para abrir</div>
 </div>
 
@@ -1358,12 +1372,6 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
     <div class="quote-bar rv"></div>
   </section>
 
-  <section class="cine cine--foto rvc" aria-label="Cáliz y paloma" data-top="#F7FAFE" data-bot="#F7FAFE">
-    <img src="banda1.jpg?v=1" alt="" loading="eager" class="cine-par">
-    <div class="cine-veil" aria-hidden="true"></div>
-    <div class="cine-frame" aria-hidden="true"></div>
-    <p class="cine-caption">“Dejen que los niños vengan a mí”</p>
-  </section>
 
   <!-- FAMILIARES -->
   <section data-ink="1" id="familiares" data-nav="Familia">
@@ -1564,28 +1572,28 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
         <!-- PENDIENTE: fotos de Santiago y Luis (por ahora ilustraciones placeholder 600x900) -->
         <div class="c3-ring" id="c3Ring">
           <button class="c3-card" type="button" data-i="0" aria-label="Ver foto 1 de 6">
-            <span class="c3-photo"><img src="foto1.jpg?v=1" alt="Santiago y Luis, recuerdo 1" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto1.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto1.jpg?v=2" alt="Foto 1" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto1.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
           <button class="c3-card" type="button" data-i="1" aria-label="Ver foto 2 de 6">
-            <span class="c3-photo"><img src="foto2.jpg?v=1" alt="Santiago y Luis, recuerdo 2" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto2.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto2.jpg?v=2" alt="Foto 2" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto2.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
           <button class="c3-card" type="button" data-i="2" aria-label="Ver foto 3 de 6">
-            <span class="c3-photo"><img src="foto3.jpg?v=1" alt="Santiago y Luis, recuerdo 3" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto3.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto3.jpg?v=2" alt="Foto 3" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto3.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
           <button class="c3-card" type="button" data-i="3" aria-label="Ver foto 4 de 6">
-            <span class="c3-photo"><img src="foto4.jpg?v=1" alt="Santiago y Luis, recuerdo 4" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto4.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto4.jpg?v=2" alt="Foto 4" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto4.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
           <button class="c3-card" type="button" data-i="4" aria-label="Ver foto 5 de 6">
-            <span class="c3-photo"><img src="foto5.jpg?v=1" alt="Santiago y Luis, recuerdo 5" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto5.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto5.jpg?v=2" alt="Foto 5" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto5.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
           <button class="c3-card" type="button" data-i="5" aria-label="Ver foto 6 de 6">
-            <span class="c3-photo"><img src="foto6.jpg?v=1" alt="Santiago y Luis, recuerdo 6" loading="eager" decoding="async" draggable="false"></span>
-            <span class="c3-mirror" aria-hidden="true"><img src="foto6.jpg?v=1" alt="" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-photo"><img src="foto6.jpg?v=2" alt="Foto 6" loading="eager" decoding="async" draggable="false"></span>
+            <span class="c3-mirror" aria-hidden="true"><img src="foto6.jpg?v=2" alt="" loading="eager" decoding="async" draggable="false"></span>
           </button>
         </div>
       </div>
@@ -1597,7 +1605,7 @@ section[data-ink],footer[data-ink]{position:relative;isolation:isolate;overflow:
     <div class="c3-lb" id="c3Lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" aria-hidden="true">
       <div class="c3-lb-bg" data-c3-close></div>
       <figure class="c3-lb-fig">
-        <img class="c3-lb-img" id="c3LbImg" src="foto1.jpg?v=1" alt="" draggable="false">
+        <img class="c3-lb-img" id="c3LbImg" src="foto1.jpg?v=2" alt="" draggable="false">
         <figcaption class="c3-lb-count" id="c3LbCount">1 / 6</figcaption>
       </figure>
       <button class="c3-lb-btn c3-lb-prev" id="c3LbPrev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
