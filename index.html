@@ -1760,8 +1760,8 @@ section[data-ink] .gift-msg,section[data-ink] .album-note,section[data-ink] .rsv
     <span class="vinyl-tonearm-head"></span>
   </span>
 </button>
-<!-- PENDIENTE: canción del cliente (por ahora suena la de la plantilla) -->
-<audio id="bgAudio" loop preload="none"><source src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/xv-arleth/cancion.mp3?v=2" type="audio/mpeg"></audio>
+<!-- Canción: "Pescador de hombres" (piano solo) -->
+<audio id="bgAudio" loop preload="none"><source src="cancion.mp3?v=1" type="audio/mpeg"></audio>
 <div id="env-flash"></div>
 <div id="confetti" aria-hidden="true"></div>
 
@@ -2948,7 +2948,7 @@ initEnvelope();
    - Si el archivo de la cancion falla (404, host caido, HTML en vez de mp3) se usa una de respaldo. */
 (function(){
   if(window.__elyAudio2) return; window.__elyAudio2=1;
-  var FALLBACK='https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/xv-arleth/cancion.mp3?r=2';
+  var FALLBACK='cancion.mp3?r=2';
   var forced=false, gestured=false;
   function A(){ return document.querySelector('audio'); }
   function toFallback(a){
